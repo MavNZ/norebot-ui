@@ -1,6 +1,7 @@
-import { Typography } from "@mui/material";
+import React from 'react'
+import { Typography } from '@mui/material'
 
-export function Temp() {
+export function Temp (): JSX.Element {
   return (
     <>
       <Typography paragraph>
@@ -32,5 +33,5 @@ export function Temp() {
         aliquam ultrices sagittis orci a.
       </Typography>
     </>
-  );
+  )
 }

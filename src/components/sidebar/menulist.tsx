@@ -1,3 +1,4 @@
+import React from "react";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -8,11 +9,15 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useNavigate } from "react-router-dom";
 
-export const MenuList = ({ open }: { open: boolean }) => {
+interface MenuProps {
+  open: boolean;
+}
+
+export const MenuList = ({ open }: MenuProps): JSX.Element => {
   // const classes = useStyles();
   const navigate = useNavigate();
 
-  const handleItemClick = ({ path }: { path: string }) => {
+  const handleItemClick = ({ path }: { path: string }): void => {
     navigate(path);
   };
 
@@ -26,15 +31,17 @@ export const MenuList = ({ open }: { open: boolean }) => {
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
-                px: 2.5,
+                px: 2.5
               }}
-              onClick={(event) => handleItemClick({ path: "/one" })}
+              onClick={() => {
+                handleItemClick({ path: "/one" });
+              }}
             >
               <ListItemIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : "auto",
-                  justifyContent: "center",
+                  justifyContent: "center"
                 }}
               >
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -52,14 +59,14 @@ export const MenuList = ({ open }: { open: boolean }) => {
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
-                px: 2.5,
+                px: 2.5
               }}
             >
               <ListItemIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : "auto",
-                  justifyContent: "center",
+                  justifyContent: "center"
                 }}
               >
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
