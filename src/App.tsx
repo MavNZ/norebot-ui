@@ -1,8 +1,9 @@
 import "./App.css";
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Sidebar from "./components/sidebar/Sidebar";
 import { Temp } from "./components/temp/temp";
-import { Routes, Route } from "react-router-dom";
 
 function App(): JSX.Element {
   return (

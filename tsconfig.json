@@ -2,5 +2,6 @@
   "compilerOptions": {
     "jsx": "react"
   },
-  "extends": "./node_modules/@tsconfig/recommended/tsconfig.json"
+  "extends": "./node_modules/@tsconfig/recommended/tsconfig.json",
+  "include": ["src/**/*", "vite.config.ts"]
 }
