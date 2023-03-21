@@ -1,5 +1,6 @@
 import MailIcon from "@mui/icons-material/Mail";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
+import QueueMusicIcon from "@mui/icons-material/QueueMusic";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -9,6 +10,9 @@ import ListItemText from "@mui/material/ListItemText";
 import { styled } from "@mui/material/styles";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { Home } from "./menuItems/Home";
+import { Playlists } from "./menuItems/Playlists";
 
 interface MenuProps {
   open: boolean;
@@ -29,7 +33,9 @@ export const MenuList = ({ open }: MenuProps): JSX.Element => {
   return (
     <ListWrapper>
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        <Home open={open} onClick={handleItemClick} />
+        <Playlists open={open} onClick={handleItemClick} />
+        {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
@@ -78,7 +84,7 @@ export const MenuList = ({ open }: MenuProps): JSX.Element => {
               <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </ListWrapper>
   );

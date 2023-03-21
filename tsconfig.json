@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
   "extends": "./node_modules/@tsconfig/recommended/tsconfig.json",
-  "include": ["src/**/*", "vite.config.ts"]
+  "include": ["src/**/*", "vite.config.ts", "api/**/*"],
+  "files": ["api/index.ts"]
 }
