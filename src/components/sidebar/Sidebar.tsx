@@ -21,7 +21,7 @@ import * as React from "react";
 
 import { MenuList } from "./menulist";
 
-const drawerWidth = 240;
+const drawerWidth = 160;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
